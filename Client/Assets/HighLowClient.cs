@@ -60,9 +60,9 @@ public class HighLowClient : MonoBehaviour
 
         // color based on hint
         string lower = msg.ToLower();
-        if (lower.Contains("higher") || lower.Contains("low"))
+        if (lower.Contains("higher"))
             resultText.color = Color.yellow;
-        else if (lower.Contains("lower") || lower.Contains("high"))
+        else if (lower.Contains("lower"))
             resultText.color = new Color(1f, 0.5f, 0f); // orange
         else if (lower.Contains("correct") || lower.Contains("win"))
         {

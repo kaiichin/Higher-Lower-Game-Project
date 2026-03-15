@@ -1,4 +1,6 @@
-﻿using System.Net; // For IPAddress
+﻿// Based on TcpEchoServerPolling handout provided by Paul Bonsma (Saxion)
+
+using System.Net; // For IPAddress
 using System.Net.Sockets; // For TcpListener, TcpClient
 using System.Text; // For Encoding
 
@@ -109,7 +111,7 @@ class TcpServer
             // (Note that this type of for loop is needed since we're modifying the collection inside the loop!)
             if (!clients[i].Connected)
             {
-                // Note: we call RemoveAt twice here, since we want to remove the client from the list, but also need to close it first to clean up resources.
+                // we call RemoveAt here, since we want to remove the client from the list, but also need to close it first to clean up resources.
                 clientSecretNumbers.Remove(clients[i]); 
 
                 clients[i].Close();
